@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct Challenge_2_AppApp: App {
@@ -15,3 +16,5 @@ struct Challenge_2_AppApp: App {
         }
     }
 }
+
+
