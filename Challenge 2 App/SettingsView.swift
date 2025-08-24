@@ -9,9 +9,38 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack (alignment: .leading){
+                HStack(alignment: .center, spacing: 100) {
+                    Circle()
+                        .frame(width: 300, height: 300)
+                        .foregroundColor(.blue)
+                    VStack (alignment: .leading, spacing: 30){
+                        Text("Name")
+                            .font(.largeTitle)
+                            .bold()
+                        HStack (spacing: 35){
+                            VStack{
+                                Text ("0")
+                                    .font(.title)
+                                Text ("photo strips taken")
+                                    .font(.title2)
+                            }
+                            VStack{
+                                Text ("0")
+                                    .font(.title)
+                                Text ("overall accuracy")
+                                    .font(.title2)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
+
 
 #Preview {
     SettingsView()
