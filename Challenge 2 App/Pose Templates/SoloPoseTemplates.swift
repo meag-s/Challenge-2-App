@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PoseTemplates {
+struct SoloPoseTemplates {
     static func getAllPoses() -> [PoseTemplate] {
         return [
             PoseTemplate(
