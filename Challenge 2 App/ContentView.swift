@@ -18,13 +18,12 @@ struct ContentView: View {
         NavigationStack{
             HStack {
                 NavigationLink{
-                    GameView()
+                    PlayerCountView()
                 }label: {
                     RoundedRectangle(cornerRadius: radius)
                         .foregroundColor(Color(red: 101/255, green: 214/255, blue: 117/255))
                         .frame(width: width, height: height)
                         .padding(padding)
-                        .border(Color(red: 61/255, green: 155/255, blue: 76/255), width: 10)
                         .overlay{
                             Text("Start")
                                 .foregroundStyle(.white)
@@ -36,7 +35,7 @@ struct ContentView: View {
                     SettingsView()
                 }label: {
                     RoundedRectangle(cornerRadius: radius)
-                        .foregroundColor(Color(red: 101/255, green: 214/255, blue: 117/255))
+                        .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5))
                         .frame(width: width, height: height)
                         .padding(padding)
                         .overlay{

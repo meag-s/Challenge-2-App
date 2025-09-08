@@ -6,13 +6,17 @@
 //
 
 import SwiftUI
+import AVFoundation
+import Vision
+import UIKit
+import ImageIO
+import MobileCoreServices
+import Photos
 
-struct PoseTemplate: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    PoseTemplate()
+struct PoseTemplate {
+    let id: Int
+    let name: String
+    let description: String
+    let targetKeypoints: [VNHumanBodyPoseObservation.JointName: CGPoint]
+    let imageName: String
 }

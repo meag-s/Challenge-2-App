@@ -17,7 +17,7 @@ struct PlayerCountView: View {
                 
                 HStack (alignment: .center, spacing: 50){
                     Button{
-                        if playerCount != 3 {
+                        if playerCount != 2 {
                             playerCount += 1
                         }
                     } label: {
@@ -31,7 +31,7 @@ struct PlayerCountView: View {
                     
                     
                     Button{
-                        if playerCount != 2 {
+                        if playerCount != 1 {
                             playerCount -= 1
                         }
                     } label: {
@@ -42,8 +42,17 @@ struct PlayerCountView: View {
                 }
             }
             .padding()
+            .toolbar{
+                ToolbarItem(placement: .bottomBar) {
+                    NavigationLink{
+                        DifficultyView()
+                    } label: {
+                        Text ("Next")
+                            .font(.system(size:25))
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
