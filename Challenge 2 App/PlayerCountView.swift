@@ -43,12 +43,23 @@ struct PlayerCountView: View {
             }
             .padding()
             .toolbar{
-                ToolbarItem(placement: .bottomBar) {
-                    NavigationLink{
-                        DifficultyView()
-                    } label: {
-                        Text ("Next")
-                            .font(.system(size:25))
+                if playerCount == 1 {
+                    ToolbarItem(placement: .bottomBar) {
+                        NavigationLink{
+                            DifficultyView()
+                        } label: {
+                            Text ("Next")
+                                .font(.system(size:25))
+                        }
+                    }
+                } else {
+                    ToolbarItem(placement: .bottomBar) {
+                        NavigationLink{
+                            DuoPlayerView()
+                        } label: {
+                            Text ("Next")
+                                .font(.system(size:25))
+                        }
                     }
                 }
             }
@@ -58,4 +69,16 @@ struct PlayerCountView: View {
 
 #Preview {
     PlayerCountView()
+}
+
+struct DuoPlayerView: View {
+    var body: some View {
+        ZStack{
+            Image("Tape")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            Text("Two player coming soon")
+        }
+        .ignoresSafeArea(.all)
+    }
 }

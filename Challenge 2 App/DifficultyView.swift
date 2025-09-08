@@ -9,17 +9,15 @@ import SwiftUI
 
 struct DifficultyView: View {
     let radius: CGFloat = 30
-    let width: CGFloat = 350
+    let width: CGFloat = 320
     let height: CGFloat = 100
     let font: CGFloat = 40
     let padding: CGFloat = 10
     var body: some View {
         NavigationStack{
             VStack{
-                
                 Text("Select Difficulty")
                     .font(.system(size:45))
-                
                 HStack {
                     NavigationLink{
                         GameView()
@@ -34,7 +32,6 @@ struct DifficultyView: View {
                                     .font(.system(size: font))
                             }
                     }
-                    
                     NavigationLink{
                         GameView()
                     }label: {
@@ -63,6 +60,7 @@ struct DifficultyView: View {
                             }
                     }
                 }
+                .padding()
             }
         }
     }
