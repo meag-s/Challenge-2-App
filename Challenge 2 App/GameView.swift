@@ -11,8 +11,9 @@ struct GameView: View {
     var body: some View {
         NavigationStack{
             ZStack {
-                CountdownCameraView()
                 CameraView(camera: CameraModel())
+                CountdownCameraView()
+                
             }
         }
         .padding()
