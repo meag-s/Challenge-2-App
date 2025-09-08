@@ -17,6 +17,8 @@ struct PoseTemplate {
     let id: Int
     let name: String
     let description: String
-    let targetKeypoints: [VNHumanBodyPoseObservation.JointName: CGPoint]
+    let targetAngles: [JointAngle]
     let imageName: String
+    let minimumConfidence: Float
 }
+
