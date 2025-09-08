@@ -10,8 +10,9 @@ import SwiftUI
 struct GameView: View {
     var body: some View {
         NavigationStack{
-            VStack {
-                Text("Empty for now")
+            ZStack {
+                CountdownCameraView()
+                CameraView(camera: CameraModel())
             }
         }
         .padding()
