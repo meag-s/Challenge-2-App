@@ -9,7 +9,13 @@ import SwiftUI
 
 struct MaintenanceView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image("Tape")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+            Text("This mode is current unavailable")
+        }
+        .ignoresSafeArea(.all)
     }
 }
 

@@ -55,7 +55,7 @@ struct PlayerCountView: View {
                 } else {
                     ToolbarItem(placement: .bottomBar) {
                         NavigationLink{
-                            MaintenceView()
+                            MaintenanceView()
                         } label: {
                             Text ("Next")
                                 .font(.system(size:25))
@@ -71,14 +71,3 @@ struct PlayerCountView: View {
     PlayerCountView()
 }
 
-struct MaintenceView: View {
-    var body: some View {
-        ZStack{
-            Image("Tape")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-            Text("This mode is current unavailable")
-        }
-        .ignoresSafeArea(.all)
-    }
-}

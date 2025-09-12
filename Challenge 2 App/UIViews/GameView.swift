@@ -11,7 +11,6 @@ import Vision
 import AVFoundation
 import Observation
 
-// MARK: - ContentView
 struct GameView: View {
     @State var cameraViewModel = CameraViewModel()
     @State private var poseViewModel = PoseEstimationViewModel()
