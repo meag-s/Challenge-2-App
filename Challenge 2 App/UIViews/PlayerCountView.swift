@@ -55,7 +55,7 @@ struct PlayerCountView: View {
                 } else {
                     ToolbarItem(placement: .bottomBar) {
                         NavigationLink{
-                            DuoPlayerView()
+                            MaintenceView()
                         } label: {
                             Text ("Next")
                                 .font(.system(size:25))
@@ -71,13 +71,13 @@ struct PlayerCountView: View {
     PlayerCountView()
 }
 
-struct DuoPlayerView: View {
+struct MaintenceView: View {
     var body: some View {
         ZStack{
             Image("Tape")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-            Text("Two player coming soon")
+            Text("This mode is current unavailable")
         }
         .ignoresSafeArea(.all)
     }

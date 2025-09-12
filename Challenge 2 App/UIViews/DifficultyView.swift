@@ -33,7 +33,7 @@ struct DifficultyView: View {
                             }
                     }
                     NavigationLink{
-                        GameView()
+                        MaintenceView()
                     }label: {
                         RoundedRectangle(cornerRadius: radius)
                             .foregroundColor(Color(red: 220/255, green: 200/255, blue: 0/255))
@@ -47,7 +47,7 @@ struct DifficultyView: View {
                     }
                     
                     NavigationLink{
-                        GameView()
+                        MaintenceView()
                     }label: {
                         RoundedRectangle(cornerRadius: radius)
                             .foregroundColor(Color(red: 255/255, green: 50/255, blue: 50/255))
