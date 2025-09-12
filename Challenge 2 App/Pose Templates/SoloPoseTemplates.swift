@@ -6,17 +6,12 @@
 //
 
 import SwiftUI
-import AVFoundation
 import Vision
-import UIKit
-import ImageIO
-import MobileCoreServices
-import Photos
+
 
 struct PoseTemplates {
     static func getAllPoses() -> [PoseTemplate] {
         return [
-
             PoseTemplate(
                 id: 1,
                 name: "Arms Up Victory",
