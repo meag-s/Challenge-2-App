@@ -18,13 +18,21 @@ struct GameView: View {
     var body: some View {
         NavigationStack{
             ZStack {
+                
                 CameraPreviewView(session: cameraViewModel.session)
                     .edgesIgnoringSafeArea(.all)
+                
                 PoseOverlayView(
                     bodyParts: poseViewModel.detectedBodyParts,
                     connections: poseViewModel.bodyConnections, isPoseDetected: $isPoseDetected
                 )
-                CountdownCameraView()
+                VStack {
+                    CountdownCameraView() // now floating at top
+                    Spacer()
+                }
+                
+                
+                
                 if poseViewModel.PoseDetected == 1 {
                     Text("Fruity pose detected")
                 } else if poseViewModel.PoseDetected == 2 {

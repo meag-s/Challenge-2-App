@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CountdownCameraView: View {
+    @State var cameraViewModel = CameraViewModel()
     @State private var counter = 5
     @State private var timerActive = true
     @State private var showCamera = false
@@ -34,10 +35,8 @@ struct CountdownCameraView: View {
                 timerActive = true
             }
         }
-        .sheet(isPresented: $showCamera) {
-            CameraView(camera: CameraModel())
-                       
-        }
+       
+           
     }
     
     func takePhoto() {

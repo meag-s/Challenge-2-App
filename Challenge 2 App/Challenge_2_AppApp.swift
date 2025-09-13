@@ -12,7 +12,7 @@ import SwiftData
 struct Challenge_2_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView()
+            ContentView()
         }
     }
 }
